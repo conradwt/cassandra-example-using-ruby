@@ -71,7 +71,7 @@ Cassandra Example Using Rails
     root 'posts#index'
     ```
 
-11.  Copy the following into app/models/post.rb file:
+11.  Create app/models/post.rb file with the following content:
 
     ```ruby
     class Post
@@ -88,7 +88,6 @@ Cassandra Example Using Rails
 12.  Create a default Cassandra configuration file
 
     ```
-    $ cd ../..
     $ rails g cequel:configuration
     ```
 
