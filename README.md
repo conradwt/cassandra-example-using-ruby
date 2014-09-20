@@ -24,20 +24,34 @@ Cassandra Example Using Rails
     $ gzip -d < apache-cassandra-2.1.0-bin.tar.gz | tar xvf -
     ```
 
-4.  Start Cassandra
+4.  Update .profile with the following lines:
+
+    ```
+    # set environment variables for Cassandra.
+    export CASSANDRA_VERSION=2.1.0
+    export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
+    export PATH=${CASSANDRA_HOME}/bin:${PATH}
+    ```
+
+    Then execute the following command within the terminal:
+
+    ```
+    $ . ~/.profile
+    ```
+5.  Start Cassandra
 
     ```
     $ cassandra -f
     ```
-5.  Open another terminal window
+6.  Open another terminal window
 
-6.  Generate a new Rails application
+7.  Generate a new Rails application
 
     ```
     $ rails _4.1.5_ new blog --skip-active-record --skip-bundle
     ```
 
-7.  Add the Ruby cequel gem
+8.  Add the Ruby cequel gem
 
     ```
     $ cd blog
@@ -45,19 +59,19 @@ Cassandra Example Using Rails
     $ bundle
     ```
 
-8.  Generate scaffold of the application
+9.  Generate scaffold of the application
 
     ```
     $ rails g scaffold post title body
     ```
 
-9.  Add the following as the first route within config/routes.rb file:
+10.  Add the following as the first route within config/routes.rb file:
 
     ```ruby
     root 'posts#index'
     ```
 
-10.  Copy the following into app/models/post.rb file:
+11.  Copy the following into app/models/post.rb file:
 
     ```ruby
     class Post
@@ -71,32 +85,32 @@ Cassandra Example Using Rails
     end
     ```
 
-11.  Create a default Cassandra configuration file
+12.  Create a default Cassandra configuration file
 
     ```
     $ cd ../..
     $ rails g cequel:configuration
     ```
 
-12.  Initialize Cassandra keyspace (database)
+13.  Initialize Cassandra keyspace (database)
 
     ```
     $ rake cequel:keyspace:create
     ```
 
-13.  Synchronize your Rails model schemas with Cassandra keyspace
+14.  Synchronize your Rails model schemas with Cassandra keyspace
 
     ```
     $ rake cequel:migrate
     ```
 
-14.  Start the Rails server
+15.  Start the Rails server
 
     ```
     $ rails s
     ```
 
-15. Play with the application
+16. Play with the application
 
     ```
     $ open http://localhost:3000
