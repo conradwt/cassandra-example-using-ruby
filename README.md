@@ -78,19 +78,19 @@ Cassandra Example Using Rails
     $ rails g cequel:configuration
     ```
 
-12.  initialize Cassandra keyspace (database)
+12.  Initialize Cassandra keyspace (database)
 
     ```
     $ rake cequel:keyspace:create
     ```
 
-13.  synchronize your Rails model schemas with Cassandra keyspace
+13.  Synchronize your Rails model schemas with Cassandra keyspace
 
     ```
     $ rake cequel:migrate
     ```
 
-14.  run the Rails server
+14.  Start the Rails server
 
     ```
     $ rails s
