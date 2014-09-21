@@ -116,6 +116,12 @@ Cassandra Example Using Rails
     ```
 ---
 
+## References
+
+* [Apache Cassandra](http://cassandra.apache.org)
+
+* [Cequel](https://github.com/cequel/cequel)
+
 ## Support
 
 Bug reports and feature requests can be filed for the cassandra-example-using-rails project here:
