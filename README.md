@@ -9,7 +9,7 @@ The purpose of this repository is to provide a very simple example of configurin
 - Rails 4.1.5
 - Java 8
 
-## Installation and Setup
+## Installation, Setup, and Usage
 
 1.  Open new terminal window
 
