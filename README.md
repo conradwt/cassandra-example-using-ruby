@@ -50,7 +50,7 @@ The purpose of this repository is to provide a very simple example of configurin
 7.  Generate a new Rails application
 
     ```
-    $ rails _4.1.5_ new blog --skip-active-record --skip-bundle
+    $ rails _4.1.6_ new blog --skip-active-record --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
