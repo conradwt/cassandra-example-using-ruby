@@ -5,8 +5,8 @@ The purpose of this repository is to provide a very simple example of configurin
 
 ## Requirements
 
-- Ruby 2.1.2p95
-- Rails 4.1.5
+- Ruby 2.1.3p242
+- Rails 4.1.6
 - Java 8
 
 ## Installation, Setup, and Usage
