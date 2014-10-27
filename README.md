@@ -23,7 +23,7 @@ The purpose of this repository is to provide a very simple example of configurin
 
     ```
     $ cd
-    $ gzip -d < apache-cassandra-2.1.0-bin.tar.gz | tar xvf -
+    $ gzip -dc apache-cassandra-2.1.0-bin.tar.gz | tar xf -
     ```
 
 4.  Update .profile with the following lines:
