@@ -16,14 +16,14 @@ The purpose of this repository is to provide a very simple example of configurin
 2.  Download Cassandra
 
     ```
-    $ wget http://mirrors.ibiblio.org/apache/cassandra/2.1.0/apache-cassandra-2.1.0-bin.tar.gz
+    $ wget http://apache.spinellicreations.com/cassandra/2.1.1/apache-cassandra-2.1.1-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```
     $ cd
-    $ gzip -dc apache-cassandra-2.1.0-bin.tar.gz | tar xf -
+    $ gzip -dc apache-cassandra-2.1.1-bin.tar.gz | tar xf -
     ```
 
 4.  Update .profile with the following lines:
