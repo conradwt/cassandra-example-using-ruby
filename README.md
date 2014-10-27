@@ -30,7 +30,7 @@ The purpose of this repository is to provide a very simple example of configurin
 
     ```
     # set environment variables for Cassandra.
-    export CASSANDRA_VERSION=2.1.0
+    export CASSANDRA_VERSION=2.1.1
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
