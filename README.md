@@ -5,8 +5,8 @@ The purpose of this repository is to provide a very simple example of configurin
 
 ## Requirements
 
-- Ruby 2.1.3p242
-- Rails 4.1.6
+- Ruby 2.1.5p273
+- Rails 4.1.8
 - Java 8
 
 ## Communication
