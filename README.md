@@ -9,6 +9,14 @@ The purpose of this repository is to provide a very simple example of configurin
 - Rails 4.1.6
 - Java 8
 
+## Communication
+
+- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-2.0). (Tag 'cassandra-2.0')
+- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-2.0).
+- If you **found a bug**, open an issue.
+- If you **have a feature request**, open an issue.
+- If you **want to contribute**, submit a pull request.
+
 ## Installation, Setup, and Usage
 
 1.  Open new terminal window
@@ -16,21 +24,21 @@ The purpose of this repository is to provide a very simple example of configurin
 2.  Download Cassandra
 
     ```
-    $ wget http://apache.spinellicreations.com/cassandra/2.1.1/apache-cassandra-2.1.1-bin.tar.gz
+    $ wget http://apache.mesi.com.ar/cassandra/2.1.2/apache-cassandra-2.1.2-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```
     $ cd
-    $ gzip -dc apache-cassandra-2.1.1-bin.tar.gz | tar xf -
+    $ gzip -dc apache-cassandra-2.1.2-bin.tar.gz | tar xf -
     ```
 
 4.  Update .profile with the following lines:
 
     ```
     # set environment variables for Cassandra.
-    export CASSANDRA_VERSION=2.1.1
+    export CASSANDRA_VERSION=2.1.2
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
@@ -50,7 +58,7 @@ The purpose of this repository is to provide a very simple example of configurin
 7.  Generate a new Rails application
 
     ```
-    $ rails _4.1.6_ new blog --skip-active-record --skip-bundle
+    $ rails _4.1.8_ new blog --skip-active-record --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
