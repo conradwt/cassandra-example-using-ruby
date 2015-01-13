@@ -1,7 +1,7 @@
 Cassandra Example Using Rails
 =============================
 
-The purpose of this repository is to provide a very simple example of configuring and using Cassandra database with the Rails web framework for development.
+The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cassandra database engine with the Rails web framework for development.
 
 ## Requirements
 
