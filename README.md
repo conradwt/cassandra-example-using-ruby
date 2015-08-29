@@ -5,8 +5,8 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Ruby 2.1.5p273
-- Rails 4.1.8
+- Ruby 2.2.3p173
+- Rails 4.2.4
 - Java 8
 
 ## Communication
@@ -24,21 +24,22 @@ The purpose of this step by step tutorial is to provide a very simple example of
 2.  Download Cassandra
 
     ```
-    $ wget http://apache.mesi.com.ar/cassandra/2.1.2/apache-cassandra-2.1.2-bin.tar.gz
+    $ cd
+    $ wget http://archive.apache.org/dist/cassandra/2.2.0/apache-cassandra-2.2.0-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```
     $ cd
-    $ gzip -dc apache-cassandra-2.1.2-bin.tar.gz | tar xf -
+    $ gzip -dc apache-cassandra-2.2.0-bin.tar.gz | tar xf -
     ```
 
 4.  Update .profile with the following lines:
 
     ```
     # set environment variables for Cassandra.
-    export CASSANDRA_VERSION=2.1.2
+    export CASSANDRA_VERSION=2.2.0
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
@@ -58,7 +59,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 7.  Generate a new Rails application
 
     ```
-    $ rails _4.1.8_ new blog --skip-active-record --skip-bundle
+    $ rails _4.2.4_ new blog --skip-active-record --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
