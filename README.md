@@ -9,6 +9,8 @@ The purpose of this step by step tutorial is to provide a very simple example of
 - Rails 4.2.4
 - Java 8
 
+Note:  This tutorial was created on Mac OS X 10.10.
+
 ## Communication
 
 - If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-2.0). (Tag 'cassandra-2.0')
