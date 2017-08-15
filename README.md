@@ -81,54 +81,54 @@ Note:  This tutorial was created on Mac OS X 10.13 beta 6.
 
 10.  Add the following as the first route within config/routes.rb file:
 
-    ```ruby
-    root 'posts#index'
-    ```
+     ```ruby
+     root 'posts#index'
+     ```
 
 11.  Create app/models/post.rb file with the following content:
 
-    ```ruby
-    class Post
-      include Cequel::Record
+     ```ruby
+     class Post
+       include Cequel::Record
 
-      key :id, :timeuuid, auto: true
-      column :title, :text
-      column :body, :text
+       key :id, :timeuuid, auto: true
+       column :title, :text
+       column :body, :text
 
-      timestamps
-    end
-    ```
+       timestamps
+     end
+     ```
 
 12.  Create a default Cassandra configuration file
 
-    ```
-    $ rails g cequel:configuration
-    ```
+     ```
+     $ rails g cequel:configuration
+     ```
 
 13.  Initialize Cassandra keyspace (database)
 
-    ```
-    $ rake cequel:keyspace:create
-    ```
+     ```
+     $ rake cequel:keyspace:create
+     ```
 
 14.  Synchronize your Rails model schemas with Cassandra keyspace
 
-    ```
-    $ rake cequel:migrate
-    ```
+     ```
+     $ rake cequel:migrate
+     ```
 
 15.  Disable ActiveRecord configuration within `config/environments/development.rb`
      by doing the following:
 
-    ```
-    # config.active_record.migration_error = :page_load
-    ```
+     ```
+     # config.active_record.migration_error = :page_load
+     ```
 
 16.  Start the Rails server
 
-    ```
-    $ rails s
-    ```
+     ```
+     $ rails s
+     ```
 
 17. Play with the application
 
