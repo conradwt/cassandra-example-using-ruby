@@ -5,16 +5,16 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Ruby 2.2.3p173
-- Rails 4.2.4
+- Ruby 2.4.1p111
+- Rails 5.1.3
 - Java 8
 
 Note:  This tutorial was created on Mac OS X 10.10.
 
 ## Communication
 
-- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-2.0). (Tag 'cassandra-2.0')
-- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-2.0).
+- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-3.0). (Tag 'cassandra-3.0')
+- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-3.0).
 - If you **found a bug**, open an issue.
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
@@ -27,21 +27,21 @@ Note:  This tutorial was created on Mac OS X 10.10.
 
     ```
     $ cd
-    $ wget http://archive.apache.org/dist/cassandra/2.2.0/apache-cassandra-2.2.0-bin.tar.gz
+    $ wget http://www-us.apache.org/dist/cassandra/3.11.0/apache-cassandra-3.11.0-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```
     $ cd
-    $ gzip -dc apache-cassandra-2.2.0-bin.tar.gz | tar xf -
+    $ gzip -dc apache-cassandra-3.11.0-bin.tar.gz | tar xf -
     ```
 
 4.  Update .profile with the following lines:
 
     ```
     # set environment variables for Cassandra.
-    export CASSANDRA_VERSION=2.2.0
+    export CASSANDRA_VERSION=3.11.0
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
@@ -61,7 +61,7 @@ Note:  This tutorial was created on Mac OS X 10.10.
 7.  Generate a new Rails application
 
     ```
-    $ rails _4.2.4_ new blog --skip-active-record --skip-bundle
+    $ rails _5.1.3_ new blog -T --skip-active-record --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
@@ -69,6 +69,7 @@ Note:  This tutorial was created on Mac OS X 10.10.
     ```
     $ cd blog
     $ echo "gem 'cequel'" >> Gemfile
+    $ echo "gem 'activemodel-serializers-xml'" >> Gemfile
     $ bundle
     ```
 
