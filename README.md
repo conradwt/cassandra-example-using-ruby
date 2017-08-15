@@ -9,7 +9,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 - Rails 5.1.3
 - Java 8
 
-Note:  This tutorial was created on Mac OS X 10.10.
+Note:  This tutorial was created on Mac OS X 10.13 beta 6.
 
 ## Communication
 
@@ -163,4 +163,4 @@ This repository is released under the [MIT License](http://www.opensource.org/li
 
 ## Copyright
 
-&copy; Copyright 2014 Conrad Taylor. All Rights Reserved.
+&copy; Copyright 2014 - 2017 Conrad Taylor. All Rights Reserved.
