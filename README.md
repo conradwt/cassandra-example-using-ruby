@@ -117,13 +117,20 @@ Note:  This tutorial was created on Mac OS X 10.10.
     $ rake cequel:migrate
     ```
 
-15.  Start the Rails server
+15.  Disable ActiveRecord configuration within `config/environments/development.rb`
+     by doing the following:
+
+    ```
+    # config.active_record.migration_error = :page_load
+    ```
+
+16.  Start the Rails server
 
     ```
     $ rails s
     ```
 
-16. Play with the application
+17. Play with the application
 
     ```
     $ open http://localhost:3000
