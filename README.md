@@ -4,7 +4,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Ruby 2.4.1p111
+- Ruby 2.5.1 or greater
 - Rails 5.1.3
 - Java 8
 
