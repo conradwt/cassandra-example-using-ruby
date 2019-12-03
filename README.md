@@ -109,13 +109,13 @@ Note: This tutorial was created on Mac OS X 10.13 beta 6.
 13. Initialize Cassandra keyspace (database)
 
     ```
-    $ rake cequel:keyspace:create
+    $ rails cequel:keyspace:create
     ```
 
 14. Synchronize your Rails model schemas with Cassandra keyspace
 
     ```
-    $ rake cequel:migrate
+    $ rails cequel:migrate
     ```
 
 15. Disable ActiveRecord configuration within `config/environments/development.rb`
