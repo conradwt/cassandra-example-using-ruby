@@ -4,11 +4,11 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Ruby 2.5.1 or greater
-- Rails 5.1.3
-- Java 8
+- Ruby 2.6.5 or greater
+- Rails 5.2.4 or greater
+- Java 13.0.1 or greater
 
-Note: This tutorial was created on Mac OS X 10.13 beta 6.
+Note: This tutorial was updated on Mac OS X 10.15.
 
 ## Communication
 
@@ -24,60 +24,52 @@ Note: This tutorial was created on Mac OS X 10.13 beta 6.
 
 2.  Download Cassandra
 
-    ```
-    $ cd
-    $ wget https://www-us.apache.org/dist/cassandra/3.11.3/apache-cassandra-3.11.3-bin.tar.gz
+    ```zsh
+    cd
+    wget https://www-us.apache.org/dist/cassandra/4.0-alpha2/apache-cassandra-4.0-alpha2-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
-    ```
-    $ cd
-    $ gzip -dc apache-cassandra-3.11.3-bin.tar.gz | tar xf -
+    ```zsh
+    cd
+    gzip -dc apache-cassandra-4.0-alpha2-bin.tar.gz | tar xf -
     ```
 
-4.  Update .profile with the following lines:
+4.  In the terminal, perform the following:
 
-    ```
-    # set environment variables for Cassandra.
-    export CASSANDRA_VERSION=3.11.3
+    ```zsh
+    export CASSANDRA_VERSION=4.0-alpha2
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
 
-    Then execute the following command within the terminal:
-
-    ```
-    $ . ~/.profile
-    ```
-
 5.  Start Cassandra
 
-    ```
-    $ cassandra -f
+    ```zsh
+    cassandra -f
     ```
 
 6.  Open another terminal window
 
 7.  Generate a new Rails application
 
-    ```
-    $ rails _5.1.3_ new blog -T --skip-active-record --skip-bundle
+    ```zsh
+    rails _5.2.4_ new blog -T --skip-active-record --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
 
-    ```
-    $ cd blog
-    $ echo "gem 'cequel'" >> Gemfile
-    $ echo "gem 'activemodel-serializers-xml'" >> Gemfile
-    $ bundle
+    ```zsh
+    cd blog
+    bundle add cequel
+    bundle add activemodel-serializers-xml
     ```
 
 9.  Generate scaffold of the application
 
-    ```
-    $ rails g scaffold post title body
+    ```zsh
+    rails g scaffold post title body
     ```
 
 10. Add the following as the first route within config/routes.rb file:
@@ -102,39 +94,32 @@ Note: This tutorial was created on Mac OS X 10.13 beta 6.
 
 12. Create a default Cassandra configuration file
 
-    ```
-    $ rails g cequel:configuration
+    ```zsh
+    rails g cequel:configuration
     ```
 
 13. Initialize Cassandra keyspace (database)
 
-    ```
-    $ rails cequel:keyspace:create
+    ```zsh
+    rails cequel:keyspace:create
     ```
 
 14. Synchronize your Rails model schemas with Cassandra keyspace
 
-    ```
-    $ rails cequel:migrate
-    ```
-
-15. Disable ActiveRecord configuration within `config/environments/development.rb`
-    by doing the following:
-
-    ```
-    # config.active_record.migration_error = :page_load
+    ```zsh
+    rails cequel:migrate
     ```
 
-16. Start the Rails server
+15. Start the Rails server
 
     ```
     $ rails s
     ```
 
-17. Play with the application
+16. Play with the application
 
-    ```
-    $ open http://localhost:3000
+    ```zsh
+    open http://localhost:3000
     ```
 
 ---
@@ -165,4 +150,4 @@ This repository is released under the [MIT License](http://www.opensource.org/li
 
 ## Copyright
 
-&copy; Copyright 2014 - 2017 Conrad Taylor. All Rights Reserved.
+&copy; Copyright 2014 - 2019 Conrad Taylor. All Rights Reserved.
