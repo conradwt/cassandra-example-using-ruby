@@ -5,7 +5,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 ## Requirements
 
 - Ruby 2.6.5 or greater
-- Rails 5.2.4 or greater
+- Rails 6.0.1 or greater
 - Java 13.0.1 or greater
 
 Note: This tutorial was updated on Mac OS X 10.15.
@@ -55,7 +55,7 @@ Note: This tutorial was updated on Mac OS X 10.15.
 7.  Generate a new Rails application
 
     ```zsh
-    rails _5.2.4_ new blog -T --skip-active-record --skip-bundle
+    rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle
     ```
 
 8.  Add the Ruby cequel gem
