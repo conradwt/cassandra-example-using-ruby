@@ -148,8 +148,8 @@ Follow Conrad Taylor on Twitter ([@conradwt](https://twitter.com/conradwt))
 
 ## License
 
-This repository is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+This repository is released under the [MIT License](./LICENSE.md).
 
 ## Copyright
 
-&copy; Copyright 2014 - 2019 Conrad Taylor. All Rights Reserved.
+&copy; Copyright 2014 - 2020 Conrad Taylor. All Rights Reserved.
