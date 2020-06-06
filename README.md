@@ -10,7 +10,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Ruby 2.7.1 or greater
 
-Note: This tutorial was updated on Mac OS X 10.15.
+Note: This tutorial was updated on macOS 10.15.5.
 
 ## Communication
 
