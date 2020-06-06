@@ -193,7 +193,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   puma (~> 4.3)
-  rails (~> 6.0.2.1)
+  rails (~> 6.0.2.2)
   sass-rails (>= 6)
   spring (~> 2.1)
   spring-watcher-listen (~> 2.0.0)
@@ -203,7 +203,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.7.0p-1
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4
