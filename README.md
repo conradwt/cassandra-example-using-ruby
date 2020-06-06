@@ -6,7 +6,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Java 13.0.1 or greater
 
-- Rails 6.0.2.2 or greater
+- Rails 6.0.3.1 or greater
 
 - Ruby 2.7.1 or greater
 
