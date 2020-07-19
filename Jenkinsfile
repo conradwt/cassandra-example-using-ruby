@@ -10,11 +10,7 @@ pipeline {
       }
     }
     stage('Test') {
-           agent {
-               docker {
-                   image 's5tdocker/baserail'
-               }
-           }
+           agent any
            steps {
                sh 'sudo docker-compose up -d'
 	       sh 'curl 0.0.0.0:4000'
