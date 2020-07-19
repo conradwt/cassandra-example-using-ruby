@@ -12,8 +12,8 @@ pipeline {
     stage('Docker Push') {
       agent any
       steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-          sh "sudo docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+        withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
+          sh "sudo docker login -u ${env.dockerhubUser} -p ${env.dockerhubPassword}"
           sh 'sudo docker push s5tdocker/baserail:latest'
         }
       }
