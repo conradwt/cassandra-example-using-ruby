@@ -9,6 +9,18 @@ pipeline {
         sh 'sudo docker build -t s5tdocker/baserail:latest .'
       }
     }
+    stage('Test') {
+           agent {
+               docker {
+                   image 's5tdocker/baserail'
+               }
+           }
+           steps {
+               sh 'sudo docker-compose up -d'
+	       sh 'curl 0.0.0.0:4000'
+               sh 'sudo docker-compose down'
+           }
+       }
     stage('Docker Push') {
       agent any
       steps {
