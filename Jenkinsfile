@@ -9,13 +9,14 @@ pipeline {
         sh 'sudo docker build -t s5tdocker/baserail:latest .'
       }
     }
-      stage('Docker Push') {
+    stage('Docker Push') {
       agent any
       steps {
-        {
+        withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
           sh 'sudo docker push s5tdocker/baserail:latest'
         }
       }
     }
-   }
+  }
 }
+
