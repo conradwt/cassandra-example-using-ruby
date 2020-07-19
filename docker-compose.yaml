@@ -3,7 +3,7 @@ services:
   my-cassandra:
     image: cassandra:3.11.2
     ports:
-      - '9042:9042'
+      - '9043:9042'
   rails:
     image: s5tdocker/baserail:latest
     #    command : sed -i 's#127.0.0.1#my-cassandra#g' /app/config/cequel.yml;/bin/sh -c tail -f /dev/null
