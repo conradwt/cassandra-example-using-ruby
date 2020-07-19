@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: new-post
+  labels:
+    app: new-post
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: new-post
+  template:
+    metadata:
+      labels:
+        app: new-post
+    spec:
+      containers:
+      - name: new-post
+        image: s5tdocker/baserail:1.0
+        command : ["/bin/sh"]
+        args: ["-c", "sed -i 's#127.0.0.1#my-cassandra#g' /app/config/cequel.yml;rails cequel:keyspace:create;rails cequel:migrate;rails s -b 0.0.0.0"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000

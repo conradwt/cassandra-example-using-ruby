@@ -12,6 +12,7 @@ pipeline {
     stage('Test') {
            agent any
            steps {
+               sh 'sudo docker-compose down'
                sh 'sudo docker-compose up -d'
 	       sh 'curl 0.0.0.0:4000'
                sh 'sudo docker-compose down'
@@ -25,6 +26,13 @@ pipeline {
         }
       }
     }
+   stage ('Deploy') {
+           steps {
+               script{
+                   sh "ansible-playbook  playbook.yml "
+               }
+           }
+     }
   }
 }
 
