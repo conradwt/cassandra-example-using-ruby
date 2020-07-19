@@ -14,7 +14,7 @@ pipeline {
            steps {
                sh 'sudo docker-compose down'
                sh 'sudo docker-compose up -d'
-	       sh 'curl 0.0.0.0:4000'
+               sh 'until nc -vz 0.0.0.0 3000  2>/dev/null; do ;echo "App is not ready, sleeping.";sleep 1;done'
                sh 'sudo docker-compose down'
            }
        }
