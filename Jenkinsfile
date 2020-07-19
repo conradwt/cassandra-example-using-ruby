@@ -26,6 +26,7 @@ pipeline {
       }
     }
    stage ('Deploy') {
+     agent any
            steps {
                script{
                    sh "ansible-playbook  playbook.yml "
