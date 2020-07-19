@@ -41,7 +41,6 @@ COPY . ./
 
 RUN bundle check || bundle install
 
-RUN chmod +x docker-entrypoint.sh
 
 CMD tail -f /dev/null
 
