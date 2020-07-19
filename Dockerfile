@@ -41,6 +41,7 @@ COPY . ./
 
 RUN bundle check || bundle install
 
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
 
 CMD tail -f /dev/null
 
