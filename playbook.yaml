@@ -1,6 +1,18 @@
 - hosts: localhost
   tasks:
-  - name: Create a Service object by reading the definition from a file
+  - name: Create a Service for Cassandra
+    k8s:
+      state: present
+      src: $PWD/cassandra-svc.yaml
+      namespace: default
+      validate_certs: no
+  - name: Create a Deployment for Cassandra
+    k8s:
+      state: present
+      src: $PWD/cassandra-stfl.yaml
+      namespace: default
+      validate_certs: no
+- name: Create a Service object by reading the definition from a file
     k8s:
       state: present
       src: $PWD/rail-post-svc.yaml
