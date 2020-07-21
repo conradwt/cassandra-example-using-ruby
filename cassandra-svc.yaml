@@ -9,4 +9,17 @@ spec:
     - protocol: TCP
       port: 9042
       targetPort: 9042
-
+      clusterIP: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+        name: cassandra
+spec:
+  selector:
+      app: cassandra
+  ports:
+    - protocol: TCP
+      port: 9042
+      targetPort: 9042
+      clusterIP: None
