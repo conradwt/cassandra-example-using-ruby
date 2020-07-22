@@ -29,7 +29,7 @@ pipeline {
      agent any
            steps {
                script{
-                   sh "sudo ansible-playbook  playbook.yaml "
+                   sh "sudo -i ansible-playbook  /var/lib/jenkins/workspace/Post-App/playbook.yaml "
                }
            }
      }
