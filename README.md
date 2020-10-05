@@ -4,18 +4,20 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Java 13.0.1 or greater
+- Cassandra 4.0-beta2 or newer
 
-- Rails 6.0.3.1 or greater
+- Java 14.0.1 or newer
 
-- Ruby 2.7.1 or greater
+- Rails 6.0.3.3 or newer
 
-Note: This tutorial was updated on macOS 10.15.5.
+- Ruby 2.7.2 or newer
+
+Note: This tutorial was updated on macOS 10.15.6.
 
 ## Communication
 
-- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-3.0). (Tag 'cassandra-3.0')
-- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra-3.0).
+- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra). (Tag 'cassandra')
+- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/cassandra).
 - If you **found a bug**, open an issue.
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
@@ -28,20 +30,20 @@ Note: This tutorial was updated on macOS 10.15.5.
 
     ```zsh
     cd
-    wget https://www-us.apache.org/dist/cassandra/4.0-alpha2/apache-cassandra-4.0-alpha2-bin.tar.gz
+    wget https://www-us.apache.org/dist/cassandra/4.0-beta2/apache-cassandra-4.0-beta2-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```zsh
     cd
-    gzip -dc apache-cassandra-4.0-alpha2-bin.tar.gz | tar xf -
+    gzip -dc apache-cassandra-4.0-beta2-bin.tar.gz | tar xf -
     ```
 
 4.  In the terminal, perform the following:
 
     ```zsh
-    export CASSANDRA_VERSION=4.0-alpha2
+    export CASSANDRA_VERSION=4.0-beta2
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
