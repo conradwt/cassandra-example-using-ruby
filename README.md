@@ -8,7 +8,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Java 14.0.1 or greater
 
-- Rails 6.0.3.2 or greater
+- Rails 6.0.3.3 or greater
 
 - Ruby 2.7.2 or greater
 
