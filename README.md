@@ -4,13 +4,13 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Cassandra 4.0-beta2 or greater
+- Cassandra 4.0-beta2 or newer
 
-- Java 14.0.1 or greater
+- Java 14.0.1 or newer
 
-- Rails 6.0.3.3 or greater
+- Rails 6.0.3.3 or newer
 
-- Ruby 2.7.2 or greater
+- Ruby 2.7.2 or newer
 
 Note: This tutorial was updated on macOS 10.15.6.
 
