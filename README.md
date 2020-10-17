@@ -8,11 +8,11 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Java 14.0.1 or newer
 
-- Rails 6.0.3.3 or newer
+- Rails 6.0.3.4 or newer
 
 - Ruby 2.7.2 or newer
 
-Note: This tutorial was updated on macOS 10.15.6.
+Note: This tutorial was updated on macOS 10.15.7.
 
 ## Communication
 
