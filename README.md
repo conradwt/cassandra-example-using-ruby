@@ -6,7 +6,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Cassandra 4.0-beta2 or newer
 
-- Java 14.0.1 or newer
+- Java >= 11.0.1 and < 12
 
 - Rails 6.0.3.4 or newer
 
@@ -59,7 +59,7 @@ Note: This tutorial was updated on macOS 10.15.7.
 7.  Generate a new Rails application
 
     ```zsh
-    rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle
+    rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript
     ```
 
 8.  Add the Ruby cequel gem
