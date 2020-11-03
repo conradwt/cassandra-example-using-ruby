@@ -8,9 +8,13 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Java >= 11.0.1 and < 12
 
+- Node v14.15.0 or newer
+
 - Rails 6.0.3.4 or newer
 
 - Ruby 2.7.2 or newer
+
+- Yarn 1.22.10 or newer
 
 Note: This tutorial was updated on macOS 10.15.7.
 
@@ -59,7 +63,7 @@ Note: This tutorial was updated on macOS 10.15.7.
 7.  Generate a new Rails application
 
     ```zsh
-    rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript
+    rails new blog --skip-active-record --skip-active-storage -T --no-rc
     ```
 
 8.  Add the Ruby cequel gem
