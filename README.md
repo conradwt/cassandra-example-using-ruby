@@ -8,11 +8,11 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Java >= 11.0.1 and < 12
 
-- Node v14.15.0 or newer
+- Node v14.15.3 or newer
 
-- Rails 6.0.3.4 or newer
+- Rails 6.1.0 or newer
 
-- Ruby 2.7.2 or newer
+- Ruby 3.0.0 or newer
 
 - Yarn 1.22.10 or newer
 
