@@ -6,17 +6,17 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Cassandra 4.0-beta2 or newer
 
-- Java >= 11.0.1 and < 12
+- OpenJDK >= 11.0.11 and < 12
 
-- Node v14.16.0 or newer
+- Node v14.17.0 or newer
 
-- Rails 6.1.3.1 or newer
+- Rails 6.1.3.2 or newer
 
 - Ruby 3.0.1 or newer
 
 - Yarn 1.22.10 or newer
 
-Note: This tutorial was updated on macOS 11.2.3.
+Note: This tutorial was updated on macOS 11.4.
 
 ## Communication
 
@@ -34,20 +34,20 @@ Note: This tutorial was updated on macOS 11.2.3.
 
     ```zsh
     cd
-    wget https://www-us.apache.org/dist/cassandra/4.0-beta2/apache-cassandra-4.0-beta2-bin.tar.gz
+    wget https://apache.claz.org/cassandra/4.0-rc1/apache-cassandra-4.0-rc1-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```zsh
     cd
-    gzip -dc apache-cassandra-4.0-beta2-bin.tar.gz | tar xf -
+    gzip -dc apache-cassandra-4.0-rc1-bin.tar.gz | tar xf -
     ```
 
 4.  In the terminal, perform the following:
 
     ```zsh
-    export CASSANDRA_VERSION=4.0-beta2
+    export CASSANDRA_VERSION=4.0-rc1
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
