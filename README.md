@@ -158,4 +158,4 @@ This repository is released under the [MIT License](./LICENSE.md).
 
 ## Copyright
 
-&copy; Copyright 2014 - 2020 Conrad Taylor. All Rights Reserved.
+&copy; Copyright 2014 - 2021 Conrad Taylor. All Rights Reserved.
