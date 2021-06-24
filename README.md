@@ -8,7 +8,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - OpenJDK >= 11.0.11 and < 12
 
-- Node v14.17.0 or newer
+- Node v14.17.1 or newer
 
 - Rails 6.1.3.2 or newer
 
