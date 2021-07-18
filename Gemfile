@@ -24,7 +24,7 @@ gem 'turbolinks',               '~> 5'
 gem 'webpacker',                '~> 5.2', '>= 5.2.1'
 
 group :development, :test do
-  gem 'byebug',                 platforms: %i[mri mingw x64_mingw]
+  # gem 'byebug',                 platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
