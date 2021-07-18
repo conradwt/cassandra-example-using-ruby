@@ -12,7 +12,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Rails 6.1.4 or newer
 
-- Ruby 3.0.1 or newer
+- Ruby 3.0.2 or newer
 
 - Yarn 1.22.10 or newer
 
