@@ -10,7 +10,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node v14.17.2 or newer
 
-- Rails 6.1.4 or newer
+- Rails 6.1.4.1 or newer
 
 - Ruby 3.0.2 or newer
 
