@@ -4,19 +4,15 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Cassandra 4.0-beta2 or newer
+- Cassandra 4.0.1 or newer
 
-- OpenJDK >= 11.0.11 and < 12
+- Java >= 11.0.1 and < 12
 
-- Node v14.17.2 or newer
-
-- Rails 6.1.4 or newer
+- Rails 6.0.3.4 or newer
 
 - Ruby 3.0.2 or newer
 
-- Yarn 1.22.10 or newer
-
-Note: This tutorial was updated on macOS 11.4.
+Note: This tutorial was updated on macOS 11.6.
 
 ## Communication
 
@@ -34,20 +30,20 @@ Note: This tutorial was updated on macOS 11.4.
 
     ```zsh
     cd
-    wget https://apache.claz.org/cassandra/4.0-rc1/apache-cassandra-4.0-rc1-bin.tar.gz
+    wget https://downloads.apache.org/cassandra/4.0.1/apache-cassandra-4.0.1-bin.tar.gz
     ```
 
 3.  Installing Cassandra
 
     ```zsh
     cd
-    gzip -dc apache-cassandra-4.0-rc1-bin.tar.gz | tar xf -
+    gzip -dc apache-cassandra-4.0.1-bin.tar.gz | tar xf -
     ```
 
 4.  In the terminal, perform the following:
 
     ```zsh
-    export CASSANDRA_VERSION=4.0-rc1
+    export CASSANDRA_VERSION=4.0.1
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
     ```
@@ -63,7 +59,7 @@ Note: This tutorial was updated on macOS 11.4.
 7.  Generate a new Rails application
 
     ```zsh
-    rails new blog --skip-active-record --skip-active-storage -T --no-rc
+    rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript
     ```
 
 8.  Add the Ruby cequel gem
