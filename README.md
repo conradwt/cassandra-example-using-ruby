@@ -6,11 +6,15 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Cassandra 4.0.1 or newer
 
-- Java >= 11.0.1 and < 12
+- OpenJDK >= 11.0.11 and < 12
 
-- Rails 6.0.3.4 or newer
+- Node v14.17.6 or newer
+
+- Rails 6.1.4 or newer
 
 - Ruby 3.0.2 or newer
+
+- Yarn 1.22.11 or newer
 
 Note: This tutorial was updated on macOS 11.6.
 
