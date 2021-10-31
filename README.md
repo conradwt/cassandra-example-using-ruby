@@ -1,6 +1,6 @@
-# Cassandra Example Using Rails
+# Cassandra Example Using Ruby
 
-The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cassandra database engine with the Rails web framework for development.
+The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cassandra database engine with the Ruby Language.
 
 ## Requirements
 
@@ -142,7 +142,7 @@ Note: This tutorial was updated on macOS 11.6.
 
 Bug reports and feature requests can be filed for the cassandra-example-using-rails project here:
 
-- [File Bug Reports and Features](https://github.com/conradwt/cassandra-example-using-rails/issues)
+- [File Bug Reports and Features](https://github.com/conradwt/cassandra-example-using-ruby/issues)
 
 ## Contact
 
