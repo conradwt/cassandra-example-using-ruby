@@ -16,7 +16,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Yarn 1.22.17 or newer
 
-Note: This tutorial was updated on macOS 11.6.
+Note: This tutorial was updated on macOS 11.6.2.
 
 ## Communication
 
