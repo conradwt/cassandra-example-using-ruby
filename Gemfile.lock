@@ -141,6 +141,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rbtree (0.4.4)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -152,6 +153,10 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+    set (1.0.2)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -197,6 +202,7 @@ DEPENDENCIES
   puma (~> 4.3)
   rails (~> 6.1, >= 6.1.4.1)
   sass-rails (>= 6)
+  sorted_set (~> 1.0)
   spring (~> 2.1)
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

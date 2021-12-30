@@ -10,7 +10,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node 14.18.2 or newer
 
-- Rails 6.1.4.1 or newer
+- Rails 7.0.1 or newer
 
 - Ruby 3.0.2 or newer
 
@@ -66,12 +66,13 @@ Note: This tutorial was updated on macOS 11.6.2.
     rails new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript
     ```
 
-8.  Add the Ruby cequel gem
+8.  Add Ruby gems
 
     ```zsh
     cd blog
     bundle add cequel
     bundle add activemodel-serializers-xml
+    bundle add sorted_set
     ```
 
 9.  Generate scaffold of the application
