@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.1.2'
 
-gem 'rails',                    '~> 6.1', '>= 6.1.4.1'
+gem 'rails',                    '~> 6.1', '>= 6.1.6'
 
 gem 'activemodel-serializers-xml', '~> 1.0.2'
 
@@ -38,3 +38,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem "sorted_set", "~> 1.0"
