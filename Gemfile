@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.1.2'
 
-gem 'rails',                    '~> 6.1', '>= 6.1.4.1'
+gem 'rails',                    '~> 6.1', '>= 6.1.6'
 
 gem 'activemodel-serializers-xml', '~> 1.0.2'
 

@@ -10,13 +10,13 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node 14.18.2 or newer
 
-- Rails 7.0.1 or newer
+- Rails 6.1.6 or newer
 
-- Ruby 3.0.2 or newer
+- Ruby 3.1.2 or newer
 
-- Yarn 1.22.17 or newer
+- Yarn 1.22.18 or newer
 
-Note: This tutorial was updated on macOS 11.6.2.
+Note: This tutorial was updated on macOS 12.3.1.
 
 ## Communication
 
