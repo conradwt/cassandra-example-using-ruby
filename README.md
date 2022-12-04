@@ -14,9 +14,9 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Ruby 3.1.2 or newer
 
-- Yarn 1.22.18 or newer
+- Yarn 1.22.19 or newer
 
-Note: This tutorial was updated on macOS 12.3.1.
+Note: This tutorial was updated on macOS 12.6.
 
 ## Communication
 
