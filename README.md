@@ -1,6 +1,6 @@
 # Cassandra Example Using Ruby
 
-The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cassandra database engine with the Ruby Language.
+The purpose of this step-by-step tutorial is to provide a very simple example of configuring and using the Cassandra database engine with the Ruby Language.
 
 ## Requirements
 
@@ -8,9 +8,9 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - OpenJDK >= 11.0.11 and < 12
 
-- Rails 5.2.8.1 or newer
+- Rails >= 5.2.8.1 and < 6
 
-- Ruby 2.7.8 or newer
+- Ruby >= 2.7.8 and < 3
 
 Note: This tutorial was updated on macOS 13.5.2.
 
@@ -59,6 +59,7 @@ Note: This tutorial was updated on macOS 13.5.2.
 7.  Generate a new Rails application
 
     ```zsh
+    gem install rails -v '5.2.8.1'
     rails _5.2.8.1_ new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript --no-rc
     ```
 
