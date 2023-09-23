@@ -46,24 +46,33 @@ Note: This tutorial was updated on macOS 13.5.2.
     export CASSANDRA_VERSION=4.1.3
     export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
     export PATH=${CASSANDRA_HOME}/bin:${PATH}
+    export JAVA_HOME=`/usr/libexec/java_home -v 11`
     ```
 
-5.  Start Cassandra
+    Note: If the above `JAVA_HOME` doesn't work for you, one can get the list of all installed JDKs using the following:
+
+    ```zsh
+     `/usr/libexec/java_home -V`
+    ```
+
+    Then update the `JAVA_HOME` environment variable with the value of the path for your `OpenJDK 11`.
+
+6.  Start Cassandra
 
     ```zsh
     cassandra -f
     ```
 
-6.  Open another terminal window
+7.  Open another terminal window
 
-7.  Generate a new Rails application
+8.  Generate a new Rails application
 
     ```zsh
     gem install rails -v '5.2.8.1'
     rails _5.2.8.1_ new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript --no-rc
     ```
 
-8.  Add the Ruby cequel gem
+9.  Add the Ruby cequel gem
 
     ```zsh
     cd blog
@@ -72,19 +81,19 @@ Note: This tutorial was updated on macOS 13.5.2.
     bundle add activemodel-serializers-xml
     ```
 
-9.  Generate scaffold of the application
+10.  Generate scaffold of the application
 
     ```zsh
     rails g scaffold post title body
     ```
 
-10. Add the following as the first route within config/routes.rb file:
+11. Add the following as the first route within config/routes.rb file:
 
     ```ruby
     root 'posts#index'
     ```
 
-11. Create app/models/post.rb file with the following content:
+12. Create app/models/post.rb file with the following content:
 
     ```ruby
     class Post
@@ -98,31 +107,31 @@ Note: This tutorial was updated on macOS 13.5.2.
     end
     ```
 
-12. Create a default Cassandra configuration file
+13. Create a default Cassandra configuration file
 
     ```zsh
     rails g cequel:configuration
     ```
 
-13. Initialize Cassandra keyspace (database)
+14. Initialize Cassandra keyspace (database)
 
     ```zsh
     rails cequel:keyspace:create
     ```
 
-14. Synchronize your Rails model schemas with Cassandra keyspace
+15. Synchronize your Rails model schemas with Cassandra keyspace
 
     ```zsh
     rails cequel:migrate
     ```
 
-15. Start the Rails server
+16. Start the Rails server
 
     ```zsh
     rails s
     ```
 
-16. Play with the application
+17. Play with the application
 
     ```zsh
     open http://localhost:3000
