@@ -6,13 +6,6 @@ services:
       - 9042:9042
     volumes:
       - cassandra-data:/var/lib/cassandra
-    environment:
-      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-    networks:
-      - cassandra-network
 
 volumes:
   cassandra-data: {}
-
-networks:
-  cassandra-network: {}

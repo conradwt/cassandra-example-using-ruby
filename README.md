@@ -42,15 +42,9 @@ Note: This tutorial was updated on macOS 13.5.2.
           - 9042:9042
         volumes:
           - cassandra-data:/var/lib/cassandra
-        environment:
-          - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-        networks:
-          - cassandra-network
 
     volumes:
       cassandra-data: {}
-    networks:
-      cassandra-network: {}
     ```
 
 4.  Start a single node cluster
