@@ -101,7 +101,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
-    puma (3.12.6)
+    nokogiri (1.15.4-x86_64-linux)
+      racc (~> 1.4)
+    puma (5.6.7)
+      nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
     rack-test (2.1.0)
@@ -177,6 +180,7 @@ GEM
 PLATFORMS
   arm64-darwin-22
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   activemodel-serializers-xml (~> 1.0)
@@ -186,7 +190,7 @@ DEPENDENCIES
   i18n (= 1.8.11)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 3.11)
+  puma (~> 5.6)
   rails (~> 5.2.8, >= 5.2.8.1)
   sass-rails (~> 5.0)
   spring
