@@ -38,6 +38,8 @@ Note: This tutorial was updated on macOS 13.5.2.
       some-cassandra:
         image: cassandra:4.1.3
         container_name: some-cassandra
+        environment:
+          - CASSANDRA_CLUSTER_NAME=cassandra-cluster
         ports:
           - 9042:9042
         volumes:
