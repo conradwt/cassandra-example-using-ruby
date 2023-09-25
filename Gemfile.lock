@@ -99,6 +99,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-darwin)
+      racc (~> 1.4)
     puma (3.12.6)
     racc (1.7.1)
     rack (2.2.8)
@@ -174,6 +176,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x86_64-darwin-20
 
 DEPENDENCIES
   activemodel-serializers-xml (~> 1.0)
