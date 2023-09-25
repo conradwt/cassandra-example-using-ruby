@@ -4,9 +4,7 @@ The purpose of this step-by-step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- Cassandra 4.1.3 or newer
-
-- OpenJDK >= 11.0.11 and < 12
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) 4.23.0 or newer
 
 - Rails >= 5.2.8.1 and < 6
 
@@ -26,53 +24,68 @@ Note: This tutorial was updated on macOS 13.5.2.
 
 1.  Open new terminal window
 
-2.  Download Cassandra
+2.  Create the project directory
 
     ```zsh
-    cd
-    wget https://downloads.apache.org/cassandra/4.1.3/apache-cassandra-4.1.3-bin.tar.gz
+    mkdir blog
+    cd blog
     ```
 
-3.  Installing Cassandra
+3.  Create `docker-compose.yml` file with the following content:
+
+    ```yaml
+    services:
+      some-cassandra:
+        image: cassandra:4.1.3
+        container_name: some-cassandra
+        ports:
+          - 9042:9042
+        volumes:
+          - cassandra-data:/var/lib/cassandra
+        environment:
+          - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+        networks:
+          - cassandra-network
+
+    volumes:
+      cassandra-data: {}
+    networks:
+      cassandra-network: {}
+    ```
+
+4.  Start a single node cluster
 
     ```zsh
-    cd
-    gzip -dc apache-cassandra-4.1.3-bin.tar.gz | tar xf -
+    docker-compose up -d
     ```
 
-4.  In the terminal, perform the following:
+5.  Check the status of your cluster
 
     ```zsh
-    export CASSANDRA_VERSION=4.1.3
-    export CASSANDRA_HOME=${HOME}/apache-cassandra-${CASSANDRA_VERSION}
-    export PATH=${CASSANDRA_HOME}/bin:${PATH}
-    export JAVA_HOME=`/usr/libexec/java_home -v 11`
+    docker-compose exec some-cassandra nodetool status
     ```
 
-    Note: If the above `JAVA_HOME` doesn't work for you, one can get the list of all installed JDKs using the following:
+    Note: One should see that the node status as Up Normal (UN) that looks similar to the following:
 
-    ```zsh
-     `/usr/libexec/java_home -V`
+    ```text
+    Datacenter: datacenter1
+    =======================
+    Status=Up/Down
+    |/ State=Normal/Leaving/Joining/Moving
+    --  Address     Load       Tokens       Owns    Host ID                               Rack
+    UN  172.19.0.2  582.5 KB   256          ?       e61cf276-c860-4990-bf03-37161414aed2  rack1
+
+    Note: Non-system keyspaces don't have the same replication settings, effective ownership information is meaningless
     ```
 
-    Then update the `JAVA_HOME` environment variable with the value of the path for your `OpenJDK 11`.
-
-6.  Start Cassandra
-
-    ```zsh
-    cassandra -f
-    ```
-
-7.  Open another terminal window
-
-8.  Generate a new Rails application
+6.  Generate a new Rails application
 
     ```zsh
     gem install rails -v '5.2.8.1'
-    rails _5.2.8.1_ new blog ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript --no-rc
+    rails _5.2.8.1_ new . ---skip-active-record --skip-active-storage -T --skip-bundle --skip-webpack-install --skip-javascript --no-rc
     ```
 
-9.  Add the Ruby cequel gem
+7.  Add the Ruby cequel gem
 
     ```zsh
     cd blog
@@ -81,19 +94,19 @@ Note: This tutorial was updated on macOS 13.5.2.
     bundle add activemodel-serializers-xml
     ```
 
-10.  Generate scaffold of the application
+8.  Generate scaffold of the application
 
     ```zsh
     rails g scaffold post title body
     ```
 
-11. Add the following as the first route within config/routes.rb file:
+9.  Add the following as the first route within config/routes.rb file:
 
     ```ruby
     root 'posts#index'
     ```
 
-12. Create app/models/post.rb file with the following content:
+10. Create app/models/post.rb file with the following content:
 
     ```ruby
     class Post
@@ -107,34 +120,46 @@ Note: This tutorial was updated on macOS 13.5.2.
     end
     ```
 
-13. Create a default Cassandra configuration file
+11. Create a default Cassandra configuration file
 
     ```zsh
     rails g cequel:configuration
     ```
 
-14. Initialize Cassandra keyspace (database)
+12. Initialize Cassandra keyspace (database)
 
     ```zsh
     rails cequel:keyspace:create
     ```
 
-15. Synchronize your Rails model schemas with Cassandra keyspace
+13. Synchronize your Rails model schemas with Cassandra keyspace
 
     ```zsh
     rails cequel:migrate
     ```
 
-16. Start the Rails server
+14. Start the Rails server
 
     ```zsh
     rails s
     ```
 
-17. Play with the application
+15. Play with the application
 
     ```zsh
     open http://localhost:3000
+    ```
+
+16. Remove the keyspace
+
+    ```zsh
+    rails cequel:keyspace:drop
+    ```
+
+17. Stop a single node cluster
+
+    ```zsh
+    docker-compose down
     ```
 
 ---
