@@ -88,7 +88,6 @@ Note: This tutorial was updated on macOS 13.5.2.
 7.  Add the Ruby cequel gem
 
     ```zsh
-    cd blog
     bundle add i18n --version "= 1.8.11"
     bundle add cequel
     bundle add activemodel-serializers-xml
